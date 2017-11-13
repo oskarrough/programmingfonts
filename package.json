@@ -1,0 +1,19 @@
+{
+	"name": "programmingfonts",
+	"scripts": {
+		"start": "poi",
+		"build": "poi build"
+	},
+	"devDependencies": {
+		"poi": "^9.5.1"
+	},
+	"dependencies": {
+		"codemirror": "^5.31.0",
+		"tachyons": "^4.9.0",
+		"vue-router": "^3.0.1"
+	},
+	"prettier": {
+		"semi": false,
+		"singleQuote": true
+	}
+}
