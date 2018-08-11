@@ -57,25 +57,25 @@ import 'codemirror/mode/javascript/javascript'
 // import 'codemirror/mode/go/go'
 
 export default {
-  props: {
-    theme: String
-  },
-  watch: {
-    theme(theme) {
-      if (!theme) return
-      this.editor.setOption('theme', theme)
-    }
-  },
+	props: {
+		theme: String
+	},
+	watch: {
+		theme(theme) {
+			if (!theme) return
+			this.editor.setOption('theme', theme)
+		}
+	},
 	mounted() {
 		this.editor = CodeMirror.fromTextArea(this.$el, {
-      lineNumbers: true,
-      mode: 'javascript',
-      styleActiveLine: true,
-      viewportMargin: Infinity,
+			lineNumbers: true,
+			mode: 'javascript',
+			styleActiveLine: true,
+			viewportMargin: Infinity,
 			matchBrackets: true,
-      lineWrapping: true,
-      theme: this.theme || 'default'
-    })
+			lineWrapping: true,
+			theme: this.theme || 'default'
+		})
 	}
 }
 </script>
@@ -83,10 +83,10 @@ export default {
 <style src="codemirror/lib/codemirror.css"></style>
 <style>
 .CodeMirror {
-  font-family: inherit;
-  border: 1px solid;
-  height: auto;
-  height: calc(100vh - 6rem);
+	font-family: inherit;
+	border: 1px solid;
+	height: auto;
+	height: calc(100vh - 6rem);
 }
 </style>
 <style src="codemirror/theme/ambiance.css"></style>

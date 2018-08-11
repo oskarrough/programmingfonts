@@ -7,6 +7,9 @@
         <label class="mr4">size
           <input type="number" v-model="fontSize" @input="pushQuery('fontSize')" class="w3">
         </label>
+        <label class="mr4">line-height
+          <input type="number" step="0.1" v-model="lineHeight" @input="pushQuery('lineHeight')" class="w3">
+        </label>
         <label class="mr4">anti-aliased
           <input type="checkbox" v-model="antiAliased" @change="pushQuery('antiAliased')">
         </label>
@@ -43,7 +46,11 @@
           </select>
         </label>
     </menu>
-    <div :style="{ 'font-family': fontFamily, fontSize: fontSize+'px', fontSmoothing }">
+    <div :style="{
+			'font-family': fontFamily,
+			fontSize: fontSize+'px',
+			lineHeight: lineHeight,
+			fontSmoothing }">
       <slot></slot>
     </div>
   </div>
@@ -59,6 +66,7 @@ export default {
     return {
       theme: q.theme || 'default',
       fontSize: q.fontSize || '13',
+      lineHeight: q.lineHeight || '1.5',
       antiAliased: q.antiAliased || false
     }
   },
