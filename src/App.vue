@@ -1,6 +1,6 @@
 <template>
   <div class="flex times">
-    <div class="w-third w-25-l br b--light-gray vh-100 overflow-y-scroll">
+    <div class="flex-shrink-0 w-third w-25-l br b--light-gray vh-100 overflow-y-scroll">
       <FontList />
      </div>
     <Controls :font="$route.params.id" class="flex-auto ph3">
